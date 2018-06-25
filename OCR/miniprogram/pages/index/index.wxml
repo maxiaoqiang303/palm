@@ -1,0 +1,40 @@
+<!--index.wxml-->
+<ocr showCamera='{{showCamera}}' scanType='{{scanType}}' quality='{{quality}}' bind:plugTakePhoto='takePhoto' bind:plugTakePhotoError='takePhotoError' bind:plugCancelCamera='cancelCamera' />
+
+<view hidden='{{showCamera}}'>
+  <view class='scan-desc'>
+    <text>上传身份证正面</text>
+  </view>
+  <view class='temp'>
+    <view>
+      <image mode='aspectFit' src='{{IDFront_src ? IDFront_src : "../../images/front_temp.png"}}' bindtap="scanIDFront" bindlongpress='longTap' class='{{IDFront_src ? "transverse-img temp-img-w" : "temp-img-h"}}'></image>
+    </view>
+  </view>
+
+  <view class='scan-desc'>
+    <text>上传身份证反面</text>
+  </view>
+  <view class='temp'>
+    <view>
+      <image mode='aspectFit' src='{{IDBack_src ? IDBack_src : "../../images/back_temp.png"}}' bindtap="scanIDBack" class='{{IDBack_src ? "transverse-img temp-img-w" : "temp-img-h"}}'></image>
+    </view>
+  </view>
+
+  <view class='scan-desc'>
+    <text>上传银行卡正面</text>
+  </view>
+  <view class='temp'>
+    <view>
+      <image mode='aspectFit' src='{{bankFront_src ? bankFront_src : "../../images/bank-front.png"}}' bindtap="scanBankFront" class='{{bankFront_src ? "transverse-img temp-img-w" : "temp-img-h"}}'></image>
+    </view>
+  </view>
+
+  <view class='scan-desc'>
+    <text>上传银行卡反面</text>
+  </view>
+  <view class='temp'>
+    <view>
+      <image mode='aspectFit' src='{{bankBack_src ? bankBack_src : "../../images/bank-back.png"}}' bindtap="scanBankBack" class='{{bankBack_src ? "transverse-img temp-img-w" : "temp-img-h"}}'></image>
+    </view>
+  </view>
+</view>

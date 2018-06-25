@@ -1,0 +1,18 @@
+<view class='com-camera'>
+  <camera wx-if='{{showCamera}}' device-position="back" flash="off" binderror="_takePhotoError" style="width: {{windowWidth + 'px'}}; height: {{windowHeight + 'px'}};">
+
+    <cover-view class='camera-cover-bg'>
+    <block wx:for="{{cover_horn}}" wx:key='index'>
+      <cover-image src='/images/camera_lt.png' animation="{{animationData[item]}}" class='camera-cover-horn {{item}}'></cover-image>
+    </block>
+      <cover-image src='/images/id_ne.png' class='camera_id_ne' wx-if='{{scanType === "IDFront"}}'></cover-image>
+      <cover-image src='/images/id_ne_text.png' class='camera_id_text' wx-if='{{scanType === "IDFront"}}'></cover-image>
+      <cover-image src='/images/id_user.png' class='camera_id_user' wx-if='{{scanType === "IDBack"}}'></cover-image>
+      <cover-image src='/images/id_user_text.png' class='camera_id_text' wx-if='{{scanType === "IDBack"}}'></cover-image>
+    </cover-view>
+    <cover-image src='/images/takephoto_btn_defaults.png' class='takephoto-btn' wx-if='{{true}}' bindtap='_takePhoto'></cover-image>
+    <cover-view bindtap='_cancelCamera' class='takephoto-cancel'>
+      <cover-image src='/images/camera_back.png' class='takephoto-cancel-img' wx-if='{{true}}'></cover-image>
+    </cover-view>
+  </camera>
+</view>

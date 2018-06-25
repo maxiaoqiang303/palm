@@ -1,0 +1,70 @@
+.camera-cover-bg{
+  width: 637rpx;
+  height: 989rpx;
+  /* border: 999rpx solid rgba(0, 0, 0, .6); */
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  overflow: hidden;
+}
+
+.camera-cover-horn{
+  position: absolute;
+  width: 28rpx;
+  height: 28rpx;
+}
+.camera-cover-horn.lt{
+  top: 0;
+  left: 0;
+}
+.camera-cover-horn.rt{
+  top: 0;
+  right: 0;
+}
+.camera-cover-horn.lb{
+  bottom: 0;
+  left: 0;
+}
+.camera-cover-horn.rb{
+  bottom: 0;
+  right: 0;
+}
+.camera_id_ne{
+  width: 201rpx;
+  height: 186rpx;
+  right: 56rpx;
+  top: 56rpx;
+  position: absolute;
+}
+.camera_id_text{
+  width: 37rpx;
+  height: 525rpx;
+  left: 36rpx;
+  top: 195rpx;
+  position: absolute;
+}
+.camera_id_user{
+  width: 352rpx;
+  height: 325rpx;
+  left: 190rpx;
+  bottom: 58rpx;
+  position: absolute;
+}
+.takephoto-btn{
+  width: 121rpx;
+  height: 121rpx;
+  left: 314rpx;
+  bottom: 40rpx;
+  position: absolute;
+}
+.takephoto-cancel{
+  padding: 30rpx;
+  right: 121rpx;
+  bottom: 55rpx;
+  position: absolute;
+}
+.takephoto-cancel-img{
+  width: 31.6rpx;
+  height: 17.5rpx;
+}

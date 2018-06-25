@@ -1,0 +1,6 @@
+{
+  "publicComponents": {
+    "ocr": "components/ocr/ocr"
+  },
+  "main": "index.js"
+}
